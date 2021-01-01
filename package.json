@@ -1,0 +1,14 @@
+{
+  "name": "pfilm_02_codesource",
+  "version": "1.0.0",
+  "description": "OpenClassrooms, parcours développeur front-end, Projet 3, Analysez les besoins de votre client pour son festival de films. Rédaction du cahier des charges et création d'une maquette avec HTML et CSS. ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/style.css"
+  },
+  "author": "Charles-Boris DAUVIER",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
