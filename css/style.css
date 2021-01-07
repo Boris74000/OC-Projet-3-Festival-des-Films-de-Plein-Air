@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Times New Roman", Times, serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5513,7 +5513,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5615,7 +5615,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9896,13 +9896,20 @@ h3 {
     border-color: #dee2e6;
   }
 }
-
-/* =============  Custom CSS  ================ */
-body {
-  background-color: orange;
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(14, 13, 13, 0.5), rgba(24, 23, 23, 0.5)), url("../img/img_banniere.png");
+  background-size: cover;
+  background-position: center;
 }
-body h1 {
-  color: black;
+
+section {
+  padding: 2rem 0;
+}
+
+.banner-header {
+  color: white;
+  padding: 0.5rem 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
