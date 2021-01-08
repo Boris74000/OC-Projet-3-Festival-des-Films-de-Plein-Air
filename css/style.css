@@ -9912,4 +9912,13 @@ section {
   padding: 0.5rem 1rem;
 }
 
+h2, h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  margin: 1rem auto !important;
+}
+
 /*# sourceMappingURL=style.css.map */
