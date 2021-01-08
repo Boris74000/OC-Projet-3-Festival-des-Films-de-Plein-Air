@@ -9,6 +9,7 @@
   "author": "Charles-Boris DAUVIER",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.3.0"
   }
 }
