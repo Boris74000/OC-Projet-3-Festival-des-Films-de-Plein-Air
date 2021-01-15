@@ -9912,6 +9912,10 @@ section {
   padding: 0.5rem 1rem;
 }
 
+.news-section__btnAllNews {
+  margin-top: 0 !important;
+}
+
 h1 {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -9922,10 +9926,6 @@ h1 {
 h2, h3 {
   text-align: center;
   margin-bottom: 1.5rem;
-}
-
-.btn {
-  margin: 1rem auto !important;
 }
 
 /*# sourceMappingURL=style.css.map */
