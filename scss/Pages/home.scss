@@ -9,12 +9,13 @@ section{
   padding: 2rem 0;
 }
 
-.banner-header {
+.banner-header{
   color: white;
   padding: 0.5rem 1rem;
 }
 
-.festival-section
-{
-
+.news-section{
+  &__btnAllNews{
+    margin-top: 0 !important;
+  }
 }
