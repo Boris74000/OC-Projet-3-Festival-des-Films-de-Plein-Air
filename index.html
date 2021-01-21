@@ -137,28 +137,47 @@
                             <h2>Actualités</h2>
                         </div>
                         <div class="col-12 col-md-6 d-flex justify-content-center">
-                            <a class="btn btn-dark news-section__btnAllNews" href="">Toutes les actualités</a>
+                            <a class="btn btn-dark news-section__btnAllNews" href="html/actualites.html">Toutes les actualités</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 d-flex flex-column justify-content-center mt-5">
                             <img class="img-fluid" src="img/affiche_festival.jpg">
                             <h3>La 1ère édition du festival</h3>
-                            <a class="btn btn-dark m-3" href="">Lire la suite</a>
+                            <a class="btn btn-dark news-section__btnNewOne" href="">Lire la suite</a>
                         </div>
                         <div class="col-12 d-flex flex-column justify-content-center mt-5">
                             <img class="img-fluid" src="img/cinema_plein_air.png">
                             <h3>Les préparatifs</h3>
-                            <a class="btn btn-dark m-3" href="">Lire la suite</a>
+                            <a class="btn btn-dark news-section__btnNewOne" href="">Lire la suite</a>
                         </div>
                     </div>
+
                 </section>
 
                 <!---------- BEGIN FOOTER ---------->
                 <footer>
-                    <div class="row border-top border-bottom border-dark">
-                        <div class="col-12 d-flex justify-content-center">
-                            <a class="btn btn-dark my-3" href="">Inscription à la newsletter</a>
+                    <div class="row border-top border-bottom border-dark footer-top">
+                        <div class="col-12 d-flex flex-column justify-content-center">
+
+                            <a class="btn btn-dark footer-top__btn-newsletter" data-toggle="collapse" href="#newsletterForm" role="button" aria-expanded="false" aria-controls="collapseExample">Inscription à la newsletter</a>
+                            <div class="collapse mt-3" id="newsletterForm">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Nom">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="surname" placeholder="Prénom">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Mail">
+                                    </div>
+                                    <button type="submit" class="btn btn-dark footer-top__btn-newsletterSubmit">Envoyer</button>
+                                </form>
+                            </div>
+
+
+
                         </div>
                         <div class="col-12 d-flex justify-content-center mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter mx-2" viewBox="0 0 16 16">
