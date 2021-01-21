@@ -9916,6 +9916,159 @@ section {
   margin-top: 0 !important;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/*on cache tous les input*/
+input {
+  display: none;
+}
+
+/*on pointe tous les labels (tri + ouverture-fermeture lightbox*/
+label {
+  cursor: pointer;
+}
+
+/*on personnalise les label*/
+input[name=diapo] + label {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 12rem;
+  border-bottom: 1px solid #2C3E50;
+  padding: 5px 20px;
+}
+
+/*quand on clique sur un label pour montrer qu'il est actif*/
+input[name=diapo]:checked + label {
+  color: white;
+  background: #2C3E50;
+}
+
+/*liste des images*/
+.diaporama {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.diaporama li {
+  margin: 1rem auto;
+  will-change: opacity;
+  opacity: 1;
+  /*on rend visible toutes les images pour pouvoir ensuite faire disparaitre certaines images avec le filtre en jouant sur l'opacite*/
+  transition: opacity 0.5s linear;
+}
+
+.diaporama li img {
+  border: 5px solid #ccc;
+}
+
+/*filtre*/
+/*ici on indique que les images non selectionnees (li:not) par le filtre ne seront presque plus visibles*/
+#cinqAout:checked ~ .diaporama li:not(.cinqAout),
+#sixAout:checked ~ .diaporama li:not(.sixAout),
+#septAout:checked ~ .diaporama li:not(.septAout),
+#huitAout:checked ~ .diaporama li:not(.huitAout) {
+  opacity: 0.1;
+}
+
+/*ici on indique qu'on ne peut pas cliquer sur les images non selectionnees par le
+filtre-on peut mette aussi display:none ce qui fera disparaitre les photos non selectionnees*/
+#cinqAout:checked ~ .diaporama li:not(.cinqAout) label,
+#sixAout:checked ~ .diaporama li:not(.sixAout) label,
+#septAout:checked ~ .diaporama li:not(.septAout) label,
+#huitAout:checked ~ .diaporama li:not(.huitAout) label {
+  pointer-events: none;
+}
+
+/*nombre de photos*/
+#tout:checked + label:after {
+  content: "(10)";
+  padding-left: 5px;
+}
+
+.sous-couche, .fenetre {
+  position: fixed;
+}
+
+.fermer, .fenetre img {
+  position: absolute;
+}
+
+.fenetre {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+.fenetre a {
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+}
+
+.fermer {
+  width: 3.125rem;
+  height: 3.125rem;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.fenetre img {
+  max-height: 90%;
+  max-height: 80vmin;
+  max-width: 90%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#fenetre1:checked ~ .fenetre1,
+#fenetre2:checked ~ .fenetre2,
+#fenetre3:checked ~ .fenetre3,
+#fenetre4:checked ~ .fenetre4,
+#fenetre5:checked ~ .fenetre5,
+#fenetre6:checked ~ .fenetre6,
+#fenetre7:checked ~ .fenetre7,
+#fenetre8:checked ~ .fenetre8,
+#fenetre9:checked ~ .fenetre9 {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s opacity linear;
+}
+
+.sous-couche {
+  opacity: 0;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 1s opacity linear;
+  z-index: 1;
+}
+
+.cache:checked ~ .sous-couche {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
 h1 {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
