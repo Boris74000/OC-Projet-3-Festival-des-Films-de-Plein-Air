@@ -9924,12 +9924,23 @@ h3 {
   font-size: 2rem;
 }
 
+.footer-top__btn-newsletterSubmit {
+  display: block;
+}
+.footer-top__btn-newsletter, .footer-top__btn-newsletterSubmit {
+  margin: 1rem auto 0 auto;
+}
+
 section {
   padding: 2rem 0;
 }
 
 .news-section__btnAllNews {
   margin-top: 0 !important;
+}
+.news-section__btnNewOne {
+  display: block;
+  margin: auto;
 }
 
 ul {
