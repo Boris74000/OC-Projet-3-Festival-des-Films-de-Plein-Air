@@ -1,7 +1,9 @@
 @import "_variable_overrides.scss";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "Layout/header";
+@import "Layout/footer";
 @import "Pages/home";
+@import "Pages/filmFeatured";
 
 h1{
   border-top: 1px solid gray;
