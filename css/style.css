@@ -9903,13 +9903,29 @@ h3 {
   background-position: center;
 }
 
-section {
-  padding: 2rem 0;
+.headerShiningMovie {
+  height: 100vh;
+  background-image: linear-gradient(rgba(14, 13, 13, 0.5), rgba(24, 23, 23, 0.5)), url("../img/shining2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .banner-header {
   color: white;
   padding: 0.5rem 1rem;
+}
+
+.banner-moviesPage {
+  position: absolute;
+  bottom: 0;
+}
+.banner-moviesPage p {
+  font-size: 2rem;
+}
+
+section {
+  padding: 2rem 0;
 }
 
 .news-section__btnAllNews {
@@ -10079,6 +10095,10 @@ h1 {
 h2, h3 {
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.row, .col-12 {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
