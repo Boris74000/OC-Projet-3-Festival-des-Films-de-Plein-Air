@@ -5,6 +5,12 @@
   &__btn-newsletter, &__btn-newsletterSubmit{
     margin: 1rem auto 0 auto;
   }
+  &__newsletterForm{
+    @include media-breakpoint-up(sm) {
+      width: 50%;
+      margin: auto;
+    }
+  }
 }
 
 .footer-bottom{
