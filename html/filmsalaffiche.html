@@ -51,101 +51,64 @@
             <!---------- LES FILMS A L'AFFICHE ---------->
             <section class="filmFeatured">
                 <h1>Les films à l'affiche</h1>
+                <div class="filmFeatured__filmFilter">
 
-                <input type="radio" id="tout" name="diapo" checked>
-                <label for="tout">Tous les jours</label>
-                <input type="radio" id="cinqAout" name="diapo">
-                <label for="cinqAout">Le 5 août</label>
-                <input type="radio" id="sixAout" name="diapo">
-                <label for="sixAout">Le 6 août</label>
-                <input type="radio" id="septAout" name="diapo">
-                <label for="septAout">Le 7 août</label>
-                <input type="radio" id="huitAout" name="diapo">
-                <label for="huitAout">Le 8 août</label>
+                    <input type="radio" id="tout" name="diapo" checked>
+                    <label for="tout">Tous les jours</label>
+                    <input type="radio" id="cinqAout" name="diapo">
+                    <label for="cinqAout">Le 5 août</label>
+                    <input type="radio" id="sixAout" name="diapo">
+                    <label for="sixAout">Le 6 août</label>
+                    <input type="radio" id="septAout" name="diapo">
+                    <label for="septAout">Le 7 août</label>
+                    <input type="radio" id="huitAout" name="diapo">
+                    <label for="huitAout">Le 8 août</label>
 
-
-                <input type="radio" name="galerie" id="fermer">
-                <input type="radio" name="galerie" id="fenetre1" class="cache">
-                <input type="radio" name="galerie" id="fenetre2" class="cache">
-                <input type="radio" name="galerie" id="fenetre3" class="cache">
-                <input type="radio" name="galerie" id="fenetre4" class="cache">
-                <input type="radio" name="galerie" id="fenetre5" class="cache">
-                <input type="radio" name="galerie" id="fenetre6" class="cache">
-                <input type="radio" name="galerie" id="fenetre7" class="cache">
-                <input type="radio" name="galerie" id="fenetre8" class="cache">
-                <input type="radio" name="galerie" id="fenetre9" class="cache">
-                <input type="radio" name="galerie" id="fenetre10" class="cache">
-                <label for="fermer" class="sous-couche"></label>
-
-                <ul class="diaporama">
-                    <li class="cinqAout">
-                        <label for="fenetre1"><img height=200 width=300 src="../img/shining1.jpg" alt="Image du film Shining"></label>
-                    </li>
-                    <li class="sixAout">
-                        <label for="fenetre2"><img height=200 width=300 src="../img/vol-au-dessus-nid-de-coucou.jpeg" alt="Image du film vol au dessus d'un nid de coucou"></label>
-                    </li>
-                    <li class="septAout">
-                        <label for="fenetre3"><img height=200 width=300 src="../img/requiem-for-a-dream1.jpg" alt="Image du film Requiem for a dream"></label>
-                    </li>
-                    <li class="huitAout">
-                        <label for="fenetre4"><img height=200 width=300 src="../img/full_metal_jacket1.jpg" alt="Image du film Full metal jacket"></label>
-                    </li>
-                    <li class="cinqAout">
-                        <label for="fenetre5"><img height=200 width=300 src="../img/into-the-wild1.jpg" alt="Image du film Into the wild"></label>
-                    </li>
-                    <li class="sixAout">
-                        <label for="fenetre6"><img height=200 width=300 src="../img/taxi-driver1.jpg" alt="Image du film Taxi driver"></label>
-                    </li>
-                    <li class="septAout">
-                        <label for="fenetre7"><img height=200 width=300 src="../img/big_fish.png" alt="Image du film Big fish"></label>
-                    </li>
-                    <li class="huitAout">
-                        <label for="fenetre8"><img height=200 width=300 src="../img/odysse_espace1.jpg" alt="Image du film l'odyssée de l'espace"></label>
-                    </li>
-                    <li class="cinqAout">
-                        <label for="fenetre9"><img height=200 width=300 src="../img/orange_mecanique.jpg" alt="Image du film Orange mécanique"></label>
-                    </li>
-                    <li class="sixAout">
-                        <label for="fenetre10"><img height=200 width=300 src="../img/the_grand_budapest_hotel.jpg" alt="Image du film The grand budapest hotel"></label>
-                    </li>
-                </ul>
-
-
-
-                <div class="fenetre fenetre1"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/shining1.jpg">
-                    <a class="btn btn-light" href="shining.html">Voir la fiche du film</a>
-                </div>
-                <div class="fenetre fenetre2"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/vol-au-dessus-nid-de-coucou.jpeg">
-                </div>
-                <div class="fenetre fenetre3"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/requiem-for-a-dream1.jpg">
-                </div>
-                <div class="fenetre fenetre4"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/full_metal_jacket1.jpg">
-                </div>
-                <div class="fenetre fenetre5"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/into-the-wild1.jpg">
-                </div>
-                <div class="fenetre fenetre6"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/taxi-driver1.jpg">
-                </div>
-                <div class="fenetre fenetre7"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/big_fish.png">
-                </div>
-                <div class="fenetre fenetre8"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/odysse_espace1.jpg">
-                </div>
-                <div class="fenetre fenetre9"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/orange_mecanique.jpg">
-                </div>
-                <div class="fenetre fenetre10"><label for="fermer" class="fermer"><svg height="40" width="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22.5" stroke="black" stroke-width="5" fill="none"/><path fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/></svg></label>
-                    <img alt src="../img/the_grand_budapest_hotel.jpg">
+                    <ul class="diaporama">
+                        <li class="cinqAout">
+                            <img height=200 width=300 src="../img/shining1.jpg" alt="Image du film Shining">
+                            <a class="btn btn-dark" href="shining.html">Shining</a>
+                        </li>
+                        <li class="sixAout">
+                            <img height=200 width=300 src="../img/vol-au-dessus-nid-de-coucou.jpeg" alt="Image du film vol au dessus d'un nid de coucou">
+                            <a class="btn btn-dark" href="">Vol au-dessus d'un nid de coucou</a>
+                        </li>
+                        <li class="septAout">
+                            <img height=200 width=300 src="../img/requiem-for-a-dream1.jpg" alt="Image du film Requiem for a dream">
+                            <a class="btn btn-dark" href="">Requiem for a dream</a>
+                        </li>
+                        <li class="huitAout">
+                            <img height=200 width=300 src="../img/full_metal_jacket1.jpg" alt="Image du film Full metal jacket">
+                            <a class="btn btn-dark" href="">Full Metal Jacket</a>
+                        </li>
+                        <li class="cinqAout">
+                            <img height=200 width=300 src="../img/into-the-wild1.jpg" alt="Image du film Into the wild">
+                            <a class="btn btn-dark" href="">Into The Wild</a>
+                        </li>
+                        <li class="sixAout">
+                            <img height=200 width=300 src="../img/taxi-driver1.jpg" alt="Image du film Taxi driver">
+                            <a class="btn btn-dark" href="">Taxi Driver</a>
+                        </li>
+                        <li class="septAout">
+                            <img height=200 width=300 src="../img/big_fish.png" alt="Image du film Big fish">
+                            <a class="btn btn-dark" href="">Big Fish</a>
+                        </li>
+                        <li class="huitAout">
+                            <img height=200 width=300 src="../img/odysse_espace1.jpg" alt="Image du film l'odyssée de l'espace">
+                            <a class="btn btn-dark" href="">L'odyssée de l'espace</a>
+                        </li>
+                        <li class="cinqAout">
+                            <img height=200 width=300 src="../img/orange_mecanique.jpg" alt="Image du film Orange mécanique">
+                            <a class="btn btn-dark" href="">Orange Mécanique</a>
+                        </li>
+                        <li class="sixAout">
+                            <img height=200 width=300 src="../img/the_grand_budapest_hotel.jpg" alt="Image du film The grand budapest hotel">
+                            <a class="btn btn-dark" href="">The Grand Budapest Hotel</a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
-
 
         <div class="container-fluid">
             <!---------- BEGIN FOOTER ---------->
@@ -195,8 +158,8 @@
                     <div class="col-12">
                         <ul class="d-flex justify-content-center list-unstyled flex-wrap">
                             <li class="mx-2 text-center">© 2020 Festival Les Films de Plein Air</li>
-                            <li class="mx-2"><a href="html/contact.html">Contact</a></li>
-                            <li class="mx-2"><a href="html/mentionslegales.html">Mentions légales</a></li>
+                            <li class="mx-2"><a href="contact.html">Contact</a></li>
+                            <li class="mx-2"><a href="mentionslegales.html">Mentions légales</a></li>
                         </ul>
                     </div>
                 </div>
