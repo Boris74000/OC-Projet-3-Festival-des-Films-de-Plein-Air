@@ -10016,12 +10016,15 @@ section {
   /*ici on indique que les images non selectionnees (li:not) par le filtre ne seront presque plus visibles*/
   /*ici on indique qu'on ne peut pas cliquer sur les images non selectionnees par le
   filtre-on peut mette aussi display:none ce qui fera disparaitre les photos non selectionnees*/
-  /*nombre de photos*/
 }
 .filmFeatured ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+.filmFeatured li {
+  display: flex;
+  flex-direction: column;
 }
 .filmFeatured img {
   object-fit: cover;
@@ -10078,68 +10081,12 @@ section {
   content: "(10)";
   padding-left: 5px;
 }
-.filmFeatured .sous-couche, .filmFeatured .fenetre {
-  position: fixed;
-}
-.filmFeatured .fermer, .filmFeatured .fenetre img {
-  position: absolute;
-}
-.filmFeatured .fenetre {
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-}
-.filmFeatured .fenetre a {
-  position: absolute;
-  bottom: 25%;
-  left: 25%;
-}
-.filmFeatured .fermer {
-  width: 3.125rem;
-  height: 3.125rem;
-  right: 0;
-  top: 0;
-  z-index: 2;
-}
-.filmFeatured .fenetre img {
-  max-height: 90%;
-  max-height: 80vmin;
-  max-width: 90%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.filmFeatured #fenetre1:checked ~ .fenetre1,
-.filmFeatured #fenetre2:checked ~ .fenetre2,
-.filmFeatured #fenetre3:checked ~ .fenetre3,
-.filmFeatured #fenetre4:checked ~ .fenetre4,
-.filmFeatured #fenetre5:checked ~ .fenetre5,
-.filmFeatured #fenetre6:checked ~ .fenetre6,
-.filmFeatured #fenetre7:checked ~ .fenetre7,
-.filmFeatured #fenetre8:checked ~ .fenetre8,
-.filmFeatured #fenetre9:checked ~ .fenetre9 {
-  visibility: visible;
-  opacity: 1;
-  transition: 1s opacity linear;
-}
-.filmFeatured .sous-couche {
-  opacity: 0;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  transition: 1s opacity linear;
-  z-index: 1;
-}
-.filmFeatured .cache:checked ~ .sous-couche {
-  height: 100%;
-  width: 100%;
-  opacity: 1;
+@media (max-width: 425px) {
+  .filmFeatured__filmFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .festivalSite__map-responsive {
