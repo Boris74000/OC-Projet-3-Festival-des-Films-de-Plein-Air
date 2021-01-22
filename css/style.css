@@ -10103,6 +10103,39 @@ section {
   position: absolute;
 }
 
+.newsPage-section__btnNewOne {
+  display: block;
+  margin: auto;
+}
+.newsPage-section__heading {
+  margin-top: 1rem;
+}
+@media (min-width: 576px) {
+  .newsPage-section__img {
+    margin: auto;
+    width: 65%;
+  }
+}
+@media (min-width: 992px) {
+  .newsPage-section__img {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .newsPage-section__img-wrap {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+  .newsPage-section__img-wrap1 {
+    background-image: url("../img/affiche_festival.jpg");
+  }
+  .newsPage-section__img-wrap2 {
+    background-image: url("../img/cinema_plein_air.png");
+  }
+}
+
 h1 {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
