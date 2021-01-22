@@ -1,0 +1,33 @@
+.newsPage-section{
+  &__btnNewOne{
+    display: block;
+    margin: auto;
+  }
+  &__heading{
+    margin-top: 1rem;
+  }
+  &__img{
+    @include media-breakpoint-up(sm) {
+      margin: auto;
+      width: 65%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 45%;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    &__img-wrap{
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+    }
+    &__img-wrap1{
+      background-image: url("../img/affiche_festival.jpg");
+    }
+    &__img-wrap2{
+      background-image: url("../img/cinema_plein_air.png");
+    }
+  }
+}
