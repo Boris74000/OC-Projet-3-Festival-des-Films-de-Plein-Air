@@ -5,9 +5,33 @@ section{
 .news-section{
   &__btnAllNews{
     margin-top: 0 !important;
+    @include media-breakpoint-up(lg) {
+      height: 42px;
+    }
   }
   &__btnNewOne{
     display: block;
     margin: auto;
+  }
+  &__heading{
+    margin-top: 1rem;
+  }
+  &__img{
+    @include media-breakpoint-up(sm) {
+      margin: auto;
+      width: 65%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 45%;
+    }
+  }
+}
+
+.movies-section{
+  .carousel{
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+      margin: auto;
+    }
   }
 }

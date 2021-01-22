@@ -16,6 +16,30 @@
 .banner-header{
   color: white;
   padding: 0.5rem 1rem;
+  &__img{
+    width: 125px;
+  }
+  &__heading{
+    >span{
+      font-weight: bold;
+    }
+  }
+  @include media-breakpoint-up(sm){
+    &__img{
+      width: 200px;
+    }
+    &__heading{
+      font-size: 1.25rem;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__img{
+      width: 250px;
+    }
+    &__heading{
+      font-size: 2.25rem;
+    }
+  }
 }
 
 .banner-moviesPage{

@@ -5,6 +5,13 @@
   &__btn-newsletter, &__btn-newsletterSubmit{
     margin: 1rem auto 0 auto;
   }
+}
 
-
+.footer-bottom{
+  &__fullLogo{
+    width: 70%;
+    @include media-breakpoint-up(sm) {
+      width: 350px;
+    }
+  }
 }
