@@ -6,6 +6,11 @@
     list-style-type: none;
   }
 
+  li{
+    display: flex;
+    flex-direction: column;
+  }
+
   img{
     object-fit:cover;
     max-width:100%;
@@ -83,91 +88,17 @@
 
   }
 
-  /*nombre de photos*/
-  //input[name="diapo"]:checked + label:after{
-  //
-  //  content: '(3)';
-  //  padding-left: 5px
-  //
-  //}
-
   #tout:checked + label:after{
     content: '(10)';
     padding-left: 5px
   }
 
-
-  .sous-couche, .fenetre{
-    position:fixed
-  }
-
-  .fermer, .fenetre img{
-    position: absolute
-  }
-
-  .fenetre{
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    opacity: 0;
-    a{
-      position: absolute;
-      bottom: 25%;
-      left: 25%;
-    }
-
-  }
-
-  .fermer{
-    width: 3.125rem;
-    height: 3.125rem;
-    right: 0;
-    top: 0;
-    z-index: 2
-  }
-
-  .fenetre img{
-    max-height: 90%;
-    max-height: 80vmin;
-    max-width: 90%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0
-  }
-
-  #fenetre1:checked ~ .fenetre1,
-  #fenetre2:checked ~ .fenetre2,
-  #fenetre3:checked ~ .fenetre3,
-  #fenetre4:checked ~ .fenetre4,
-  #fenetre5:checked ~ .fenetre5,
-  #fenetre6:checked ~ .fenetre6,
-  #fenetre7:checked ~ .fenetre7,
-  #fenetre8:checked ~ .fenetre8,
-  #fenetre9:checked ~ .fenetre9{
-    visibility: visible;
-    opacity: 1;
-    transition: 1s opacity linear
-  }
-
-
-  .sous-couche{
-    opacity: 0;
-    left: 0;
-    top: 0;
-    background: hsla(0, 0%, 0%, 0.8);
-    transition: 1s opacity linear;
-    z-index: 1
-  }
-
-  .cache:checked~.sous-couche{
-    height: 100%;
-    width: 100%;
-    opacity: 1
-  }
   //---------- fin ------------
+  &__filmFilter{
+    @media (max-width: 425px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
