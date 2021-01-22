@@ -9952,6 +9952,12 @@ h3 {
 .footer-top__btn-newsletter, .footer-top__btn-newsletterSubmit {
   margin: 1rem auto 0 auto;
 }
+@media (min-width: 576px) {
+  .footer-top__newsletterForm {
+    width: 50%;
+    margin: auto;
+  }
+}
 
 .footer-bottom__fullLogo {
   width: 70%;
@@ -10134,6 +10140,20 @@ section {
   height: 100%;
   width: 100%;
   opacity: 1;
+}
+
+.festivalSite__map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.festivalSite iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 h1 {
