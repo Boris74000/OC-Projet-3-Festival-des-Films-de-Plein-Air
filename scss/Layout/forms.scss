@@ -1,0 +1,9 @@
+.contactForm{
+  &__mailInput{
+    transition: background-color 1s;
+    &:not(:focus):invalid{
+      background-color: red;
+      color: white;
+    }
+  }
+}

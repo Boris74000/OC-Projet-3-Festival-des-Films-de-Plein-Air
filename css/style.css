@@ -10089,6 +10089,14 @@ section {
   }
 }
 
+.diaporama img {
+  filter: blur(4px);
+  transition: 600ms;
+}
+.diaporama img:hover {
+  filter: blur(0);
+}
+
 .festivalSite__map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
@@ -10136,6 +10144,21 @@ section {
   }
 }
 
+.btnCustomScale {
+  transition: 400ms transform;
+}
+.btnCustomScale:hover {
+  transform: scale(1.15);
+}
+
+.contactForm__mailInput {
+  transition: background-color 1s;
+}
+.contactForm__mailInput:not(:focus):invalid {
+  background-color: red;
+  color: white;
+}
+
 h1 {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -10156,6 +10179,26 @@ h2, h3 {
 
 .row, .col-12 {
   margin-bottom: 1rem;
+}
+
+.ballContainer {
+  margin-top: 200px;
+}
+.ballContainer__btn {
+  order: 2;
+}
+.ballContainer__btn:active + .ballContainer__ball {
+  transform: scale(1);
+}
+.ballContainer__ball {
+  order: 1;
+  width: 100px;
+  height: 100px;
+  background: green;
+  margin-bottom: 1rem;
+  border-radius: 50px;
+  transform: scale(0.1);
+  transition: transform 4s;
 }
 
 /*# sourceMappingURL=style.css.map */

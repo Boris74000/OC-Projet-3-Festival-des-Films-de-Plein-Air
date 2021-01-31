@@ -1,0 +1,6 @@
+.btnCustomScale{
+  transition: 400ms transform ;
+  &:hover{
+    transform: scale(1.15);
+  }
+}

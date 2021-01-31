@@ -6,6 +6,8 @@
 @import "Pages/filmFeatured";
 @import "Pages/festivalPage";
 @import "Pages/news";
+@import "Components/buttons";
+@import "Layout/forms";
 
 h1{
   border-top: 1px solid gray;
@@ -32,4 +34,25 @@ h2{
 }
 
 
+//----------- ANIMATION TESTS ---------------//
+// ------------------------------------------//
+.ballContainer{
+  margin-top: 200px;
+  &__btn{
+    order: 2;
+    &:active + .ballContainer__ball{
+      transform: scale(1.0);
+    }
+  }
+  &__ball {
+    order: 1;
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin-bottom: 1rem;
+    border-radius: 100px * 0.5;
+    transform: scale(0.1);
+    transition: transform 4s;
+  }
+}
 
