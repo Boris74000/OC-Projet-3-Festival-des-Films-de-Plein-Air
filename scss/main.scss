@@ -174,3 +174,125 @@ h2{
     transition: transform 400ms;
   }
 }
+
+.container{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 50px 0;
+  &__btn{
+    margin-top: 30px;
+    &:active + .container__progress > .container__progressBar{
+        transform: scaleX(1);
+    }
+  }
+  &__progress{
+    width: 400px;
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+  }
+  &__progressBar{
+    background-color: #007bff;
+    width: 97%;
+    height: 85%;
+    margin: auto;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1000ms cubic-bezier(.32, 0, .07, 1);
+  }
+}
+
+// Animation avec Opacity
+@mixin pseudo-elem{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+//.container5{
+//  .btnCustomDarken{
+//    background-color: orange;
+//    color: white;
+//    position: relative;
+//    z-index: 1;
+//    &:hover{
+//      color: white;
+//      &::after{
+//        opacity: 1;
+//      }
+//      & + img{
+//        &::before{
+//          opacity: 0;
+//        }
+//      }
+//    }
+//    &::after{
+//      @include pseudo-elem;
+//      background: radial-gradient(circle, lighten(orange, 5) 0%, darken(orange, 10) 100%);
+//      opacity: 0;
+//      z-index: -1;
+//      transition: opacity 250ms;
+//    }
+//  }
+//  .container5__imgBox{
+//    z-index: -1;
+//    img{
+//      width: 300px;
+//      height: auto;
+//      transition: opacity 1s;
+//    }
+//    &::before{
+//      @include pseudo-elem;
+//      border-radius: 1rem;
+//      background: orange;
+//      z-index: 1;
+//    }
+//  }
+//}
+
+.containerTest{
+  .test{
+    position: relative;
+    z-index: -1;
+    width: 300px;
+    height: 169px;
+    margin: 0 auto;
+    &::before{
+      @include pseudo-elem;
+      background: radial-gradient(circle, lighten(#15dea5, 5) 0%, darken(#15dea5, 10) 100%);
+      z-index: 1;
+      transition: opacity 1.5s;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__btn{
+    &:hover{
+      & + .test{
+        &::before{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// ====================== Les @keyframes =======================
+
+@keyframes progress-bar {
+  0%{
+    transform: scaleX(0);
+  }
+  100%{
+    transform: scaleX(100);
+  }
+}
+
+
+
+
