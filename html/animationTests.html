@@ -10,15 +10,18 @@
         <title>Animations Tests</title>
     </head>
     <body>
+    <!-------------------------- Balle qui s'agrandit-------------------------->
         <div class="container d-flex flex-column align-items-center ballContainer">
             <button class="btn btn-light ballContainer__btn">C'est parti</button>
             <div class="ballContainer__ball"></div>
         </div>
 
+    <!-------------------------- Cube qui de déplace dans un rectangle -------------------------->
         <div class="cubeContainer">
             <div class="cubeContainer__cube"></div>
         </div>
 
+    <!-------------------------- Cube qui s'agrandit avec le mot "surprise" -------------------------->
         <div class="cubeContainer2">
             <button class="cubeContainer2__btn btn-danger">Transform</button>
             <div class="cubeContainer2__cube">
@@ -26,7 +29,8 @@
             </div>
         </div>
 
-        <div class="cubeContainer3">
+    <!-------------------------- Cube avec la propriété rotate() -------------------------->
+    <div class="cubeContainer3">
             <button class="cubeContainer3__btn btn-dark">Transform!</button>
             <div class="cubeContainer3__boxes">
                 <div class="cubeContainer3__boxesBase boxes--rotDegrees">rotate(360deg)</div>
@@ -34,10 +38,39 @@
             </div>
         </div>
 
-        <div class="cubeContainer4">
+    <!-------------------------- Rectangle en 3d -------------------------->
+    <div class="cubeContainer4">
             <button class="cubeContainer4__btn btn-dark">Transform!</button>
             <div class="cubeContainer4__cube"></div>
         </div>
+
+    <!-------------------------- Barre de progression -------------------------->
+    <div class="container">
+            <button class="btn btn-primary container__btn">Charger !</button>
+            <div class="container__progress">
+                <div class="container__progressBar"></div>
+            </div>
+        </div>
+
+<!--        <div class="d-flex align-items-center flex-column container5">-->
+<!--            <button class="btn btnCustomDarken order-2">-->
+<!--                Survole-moi-->
+<!--            </button>-->
+<!--            <div class="container5__imgBox">-->
+<!--                <img class="order-1" src="../img/into-the-wild1.jpg">-->
+<!--            </div>-->
+<!--        </div>-->
+
+    <!-------------------------- Opacité sur une image -------------------------->
+        <div class="containerTest d-flex flex-column align-items-center my-5">
+            <button class="btn btn-danger containerTest__btn order-2">Voir l'image</button>
+            <div class="test order-1">
+                <img src="../img/into-the-wild1.jpg">
+            </div>
+        </div>
+
+
+
 
 
         <!-- Optional JavaScript -->
