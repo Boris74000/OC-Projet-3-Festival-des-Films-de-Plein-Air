@@ -10,6 +10,21 @@
         <title>Animations Tests</title>
     </head>
     <body>
+    <!-------------------------- Transition sur menu -------------------------->
+    <div class="menuCustom container-fluid d-flex justify-content-around">
+        <ul class="list-unstyled d-flex justify-content-around">
+            <li>test</li>
+            <li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+        </ul>
+        <div class="menuBurger hidden d-flex flex-column">
+            <span>---</span>
+            <span>---</span>
+            <span>---</span>
+        </div>
+    </div>
+
     <!-------------------------- Balle qui s'agrandit-------------------------->
         <div class="container d-flex flex-column align-items-center ballContainer">
             <button class="btn btn-light ballContainer__btn">C'est parti</button>
@@ -42,15 +57,27 @@
     <div class="cubeContainer4">
             <button class="cubeContainer4__btn btn-dark">Transform!</button>
             <div class="cubeContainer4__cube"></div>
-        </div>
+    </div>
 
     <!-------------------------- Barre de progression -------------------------->
     <div class="container">
-            <button class="btn btn-primary container__btn">Charger !</button>
-            <div class="container__progress">
-                <div class="container__progressBar"></div>
-            </div>
+        <button class="btn btn-primary container__btn">Charger !</button>
+        <div class="container__progress">
+            <div class="container__progressBar"></div>
         </div>
+    </div>
+
+    <!-------------------------- Barre de progression SetIndustries -------------------------->
+        <div class="containerSet__progress m-auto">
+            <a href="#">
+                <p>En savoir plus</p>
+                <div class="containerSet__progressBar"></div>
+            </a>
+        </div>
+
+
+
+
 
 <!--        <div class="d-flex align-items-center flex-column container5">-->
 <!--            <button class="btn btnCustomDarken order-2">-->
