@@ -37,10 +37,19 @@ h2{
 //----------- ANIMATION TESTS ---------------//
 // ------------------------------------------//
 .menuCustom{
-  background-color: #6f42c1;
-  ul{
+  background-color: #0f6674;
+  height: 130px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  @include media-breakpoint-down(md){
+    justify-content: flex-end !important;
+  }
+  .menuCustomUl{
+    display: flex;
+    justify-content: space-around;
     @include media-breakpoint-down(md){
-      display: none !important;
+      display: none;
     }
   }
   li{
@@ -53,6 +62,35 @@ h2{
     }
   }
 }
+.menuMobile{
+  background-color: #007bff;
+  height: 180px;
+  display: none;
+}
+
+.animationCustom{
+  a{
+    display:none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    transform: scale(0);
+    transform-origin: left;
+    height: 2px;
+    background: yellow;
+    transition: transform 400ms ease-in-out;
+  }
+  &:hover::after{
+    transform: scale(1);
+  }
+}
+
+
+
 .hidden{
   display: none;
 }
@@ -308,13 +346,41 @@ h2{
 }
 
 // ====================== Les @keyframes =======================
+$prog-bar-dur: 1000ms;
+$prog-bar-delay: 150ms;
+$cat-delay: $prog-bar-dur + $prog-bar-delay;
+
 
 @keyframes progress-bar {
   0%{
     transform: scaleX(0);
   }
+  17%{
+    transform: scaleX(.18);
+  }
+  24%{
+    transform: scaleX(.4);
+  }
+  46%{
+    transform: scaleX(.81);
+
+  }
+  85%, 100%{
+    opacity: 1;
+
+  }
   100%{
     transform: scaleX(1);
+  }
+}
+
+
+@keyframes catAnimation {
+  0%{
+    transform: translateX(-999px);
+  }
+  100%{
+    transform: translateX(0);
   }
 }
 
@@ -326,7 +392,7 @@ h2{
   &__btn{
     margin-top: 30px;
     &:active + .container__progress > .container__progressBar{
-      animation: progress-bar 1000ms;
+
     }
   }
   &__progress{
@@ -335,13 +401,34 @@ h2{
     height: 50px;
     display: flex;
   }
+  .cat {
+    width: 50vw;
+    height: 30vw;
+    position: absolute;
+    overflow: hidden;
+    background-image: url("https://images.pexels.com/photos/6328142/pexels-photo-6328142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
+    background-position: -20%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1rem;
+    font-size: 3vw;
+    font-weight: 900;
+    color: white;
+    animation: catAnimation 1000ms $cat-delay;
+  }
   &__progressBar{
+    opacity: 0;
     background-color: #007bff;
     width: 97%;
     height: 85%;
     margin: auto;
     transform-origin: left;
     transform: scaleX(0);
+    animation: progress-bar $prog-bar-dur $prog-bar-delay;
   }
 }
 
