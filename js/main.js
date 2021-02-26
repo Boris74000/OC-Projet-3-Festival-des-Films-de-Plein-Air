@@ -6,7 +6,8 @@ $(document).ready(function(){
         });
     });
 
-    $('.menuBurger').on("onclick", function () {
+    $(".menuBurger").click(function(){
+        $(".menuMobile").toggle("slow");
+    });
 
-    })
 });
