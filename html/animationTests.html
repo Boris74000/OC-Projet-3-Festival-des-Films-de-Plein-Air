@@ -11,9 +11,9 @@
     </head>
     <body>
     <!-------------------------- Transition sur menu -------------------------->
-    <div class="menuCustom container-fluid d-flex justify-content-around">
-        <ul class="list-unstyled d-flex justify-content-around">
-            <li>test</li>
+    <div class="menuCustom container-fluid">
+        <ul class="list-unstyled menuCustomUl">
+            <li><a class="animationCustom" href="#">testtest</a></li>
             <li>test1</li>
             <li>test2</li>
             <li>test3</li>
@@ -23,6 +23,14 @@
             <span>---</span>
             <span>---</span>
         </div>
+    </div>
+    <div class="menuMobile">
+        <ul class="list-unstyled d-flex justify-content-around menuCustomUl">
+            <li>test</li>
+            <li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+        </ul>
     </div>
 
     <!-------------------------- Balle qui s'agrandit-------------------------->
@@ -61,19 +69,23 @@
 
     <!-------------------------- Barre de progression -------------------------->
     <div class="container">
-        <button class="btn btn-primary container__btn">Charger !</button>
+<!--        <button class="btn btn-primary container__btn">Charger !</button>-->
         <div class="container__progress">
+            <div class="cat">
+                <p>Merci pour votre patience</p>
+                <p>Voici votre paysage</p>
+            </div>
             <div class="container__progressBar"></div>
         </div>
     </div>
 
     <!-------------------------- Barre de progression SetIndustries -------------------------->
-        <div class="containerSet__progress m-auto">
-            <a href="#">
-                <p>En savoir plus</p>
-                <div class="containerSet__progressBar"></div>
-            </a>
-        </div>
+<!--        <div class="containerSet__progress m-auto">-->
+<!--            <a href="#">-->
+<!--                <p>En savoir plus</p>-->
+<!--                <div class="containerSet__progressBar"></div>-->
+<!--            </a>-->
+<!--        </div>-->
 
 
 
@@ -89,12 +101,12 @@
 <!--        </div>-->
 
     <!-------------------------- Opacité sur une image -------------------------->
-        <div class="containerTest d-flex flex-column align-items-center my-5">
-            <button class="btn btn-danger containerTest__btn order-2">Voir l'image</button>
-            <div class="test order-1">
-                <img src="../img/into-the-wild1.jpg">
-            </div>
-        </div>
+<!--        <div class="containerTest d-flex flex-column align-items-center my-5">-->
+<!--            <button class="btn btn-danger containerTest__btn order-2">Voir l'image</button>-->
+<!--            <div class="test order-1">-->
+<!--                <img src="../img/into-the-wild1.jpg">-->
+<!--            </div>-->
+<!--        </div>-->
 
 
 
