@@ -348,7 +348,7 @@ h2{
 // ====================== Les @keyframes =======================
 $prog-bar-dur: 1000ms;
 $prog-bar-delay: 150ms;
-$cat-delay: $prog-bar-dur + $prog-bar-delay;
+$cat-delay: $prog-bar-dur + $prog-bar-delay*2;
 
 
 @keyframes progress-bar {
@@ -360,10 +360,11 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay;
   }
   24%{
     transform: scaleX(.4);
+    animation-timing-function: cubic-bezier(.9,0,.1,1);
   }
   46%{
     transform: scaleX(.81);
-
+    animation-timing-function: cubic-bezier(.25,1,0.25,1);
   }
   85%, 100%{
     opacity: 1;
@@ -377,7 +378,7 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay;
 
 @keyframes catAnimation {
   0%{
-    transform: translateX(-999px);
+    transform: translateX(-9999px);
   }
   100%{
     transform: translateX(0);
@@ -401,6 +402,18 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay;
     height: 50px;
     display: flex;
   }
+
+  &__progressBar{
+    opacity: 1;
+    background-color: #007bff;
+    width: 97%;
+    height: 85%;
+    margin: auto;
+    transform-origin: left;
+    transform: scaleX(0.5);
+    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
+  }
+
   .cat {
     width: 50vw;
     height: 30vw;
@@ -418,17 +431,7 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay;
     font-size: 3vw;
     font-weight: 900;
     color: white;
-    animation: catAnimation 1000ms $cat-delay;
-  }
-  &__progressBar{
-    opacity: 0;
-    background-color: #007bff;
-    width: 97%;
-    height: 85%;
-    margin: auto;
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: progress-bar $prog-bar-dur $prog-bar-delay;
+    animation: catAnimation 0s $cat-delay both;
   }
 }
 
