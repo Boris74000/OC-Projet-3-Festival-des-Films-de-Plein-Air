@@ -10,4 +10,12 @@ $(document).ready(function(){
         $(".menuMobile").toggle("slow");
     });
 
+    // $( ".containerImgOpacity" ).click(function() {
+    //     alert($(".linkUrl").attr('href'));
+    // });
+    $('.containerImgOpacity').on('click', function (event) {
+        document.location = $(this).find("a").attr("href");
+    });
+
+
 });
