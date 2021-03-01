@@ -10434,6 +10434,33 @@ h2, h3 {
   opacity: 0;
 }
 
+.containerImgOpacity {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 100px;
+  cursor: pointer;
+}
+.containerImgOpacity:hover img:last-child {
+  opacity: 1;
+}
+.containerImgOpacity p {
+  position: absolute;
+  top: -110px;
+}
+.containerImgOpacity img {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.containerImgOpacity img:last-child {
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+}
+
 @keyframes progress-bar {
   0% {
     transform: scaleX(0);
