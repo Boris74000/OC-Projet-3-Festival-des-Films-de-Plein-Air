@@ -1,9 +1,20 @@
 .contactForm{
   &__mailInput{
-    transition: background-color 1s;
     &:not(:focus):invalid{
       background-color: red;
       color: white;
+      animation: headshake 100ms cubic-bezier(.4,.1,.6,.9) 2;
     }
+  }
+}
+
+// Animation pour faire bouger l'input de la gauche vers la droite
+$shake-intensity: 1%;
+@keyframes headshake {
+  25%{
+    transform: translateX($shake-intensity);
+  }
+  75%{
+    transform: translateX(-$shake-intensity);
   }
 }

@@ -275,46 +275,46 @@ h2{
   left: 0;
   right: 0;
 }
-//.container5{
-//  .btnCustomDarken{
-//    background-color: orange;
-//    color: white;
-//    position: relative;
-//    z-index: 1;
-//    &:hover{
-//      color: white;
-//      &::after{
-//        opacity: 1;
-//      }
-//      & + img{
-//        &::before{
-//          opacity: 0;
-//        }
-//      }
-//    }
-//    &::after{
-//      @include pseudo-elem;
-//      background: radial-gradient(circle, lighten(orange, 5) 0%, darken(orange, 10) 100%);
-//      opacity: 0;
-//      z-index: -1;
-//      transition: opacity 250ms;
-//    }
-//  }
-//  .container5__imgBox{
-//    z-index: -1;
-//    img{
-//      width: 300px;
-//      height: auto;
-//      transition: opacity 1s;
-//    }
-//    &::before{
-//      @include pseudo-elem;
-//      border-radius: 1rem;
-//      background: orange;
-//      z-index: 1;
-//    }
-//  }
-//}
+.container5{
+  .btnCustomDarken{
+    background-color: orange;
+    color: white;
+    position: relative;
+    z-index: 1;
+    &:hover{
+      color: white;
+      &::after{
+        opacity: 1;
+      }
+      & + img{
+        &::before{
+          opacity: 0;
+        }
+      }
+    }
+    &::after{
+      @include pseudo-elem;
+      background: radial-gradient(circle, lighten(orange, 5) 0%, darken(orange, 10) 100%);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
+    }
+  }
+  .container5__imgBox{
+    z-index: -1;
+    img{
+      width: 300px;
+      height: auto;
+      transition: opacity 1s;
+    }
+    &::before{
+      @include pseudo-elem;
+      border-radius: 1rem;
+      background: orange;
+      z-index: 1;
+    }
+  }
+}
 
 .containerTest{
   .test{
@@ -407,63 +407,124 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
   }
 }
 
+// Barre de progression puis image qui s'affiche
+//@keyframes catAnimation {
+//  0%{
+//    transform: translateX(-9999px);
+//  }
+//  100%{
+//    transform: translateX(0);
+//  }
+//}
+//.container{
+//  display: flex;
+//  flex-direction: column-reverse;
+//  align-items: center;
+//  padding: 50px 0;
+//  &__btn{
+//    margin-top: 30px;
+//    &:active + .container__progress > .container__progressBar{
+//
+//    }
+//  }
+//  &__progress{
+//    width: 400px;
+//    border: 1px solid black;
+//    height: 50px;
+//    display: flex;
+//  }
+//  &__progressBar{
+//    opacity: 1;
+//    background-color: #007bff;
+//    width: 97%;
+//    height: 85%;
+//    margin: auto;
+//    transform-origin: left;
+//    transform: scaleX(0.5);
+//    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
+//  }
+//  .cat {
+//    width: 50vw;
+//    height: 30vw;
+//    position: absolute;
+//    overflow: hidden;
+//    background-image: url("https://images.pexels.com/photos/6328142/pexels-photo-6328142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+//    background-size: cover;
+//    background-position: -20%;
+//    z-index: 1;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    align-items: center;
+//    padding: .1rem;
+//    font-size: 3vw;
+//    font-weight: 900;
+//    color: white;
+//    animation: catAnimation 0s $cat-delay both;
+//  }
+//}
 
-@keyframes catAnimation {
-  0%{
-    transform: translateX(-9999px);
-  }
-  100%{
-    transform: translateX(0);
+// Loader
+$cd-bars: #15DEA5;
+$cd-bars-inv: #0E397F;
+$size: 3vh;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
+
+.load {
+  width: $size*10;
+  height: $size*7.5;
+  display: flex;
+  justify-content: space-evenly;
+  &__bar {
+    background-color: #15DEA5;
+    height: 100%;
+    width: $size;
+    animation: bars $anim-dur backwards infinite alternate ease-in-out;
+    @for $i from 1 through $num-bars{
+      &--#{$i}{
+      animation-delay: $anim-delay * $i;
+      }
+      &--#{$i}-inv{
+        animation-delay: $anim-delay * $i + random(100)*30ms;
+        animation-direction: alternate-reverse;
+        background-color: $cd-bars-inv;
+        &:hover{
+          animation-play-state: paused;
+        }
+      }
+    }
   }
 }
 
-.container{
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  padding: 50px 0;
-  &__btn{
-    margin-top: 30px;
-    &:active + .container__progress > .container__progressBar{
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
 
-    }
   }
-  &__progress{
-    width: 400px;
-    border: 1px solid black;
-    height: 50px;
-    display: flex;
+  100% {
+    transform: scaleY(1.0);
   }
+}
 
-  &__progressBar{
-    opacity: 1;
-    background-color: #007bff;
-    width: 97%;
-    height: 85%;
-    margin: auto;
-    transform-origin: left;
-    transform: scaleX(0.5);
-    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
+// Pause sur animation
+.spin {
+  background-color: #15DEA5;
+  width: 30vh;
+  height: 30vh;
+  animation: spin 3s linear infinite paused;
+  &:hover{
+    animation-play-state: running;
   }
+}
 
-  .cat {
-    width: 50vw;
-    height: 30vw;
-    position: absolute;
-    overflow: hidden;
-    background-image: url("https://images.pexels.com/photos/6328142/pexels-photo-6328142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-    background-size: cover;
-    background-position: -20%;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: .1rem;
-    font-size: 3vw;
-    font-weight: 900;
-    color: white;
-    animation: catAnimation 0s $cat-delay both;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
