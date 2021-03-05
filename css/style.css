@@ -10152,14 +10152,20 @@ section {
   transform: scale(1.15);
 }
 
-.contactForm__mailInput {
-  transition: background-color 1s;
-}
 .contactForm__mailInput:not(:focus):invalid {
   background-color: red;
   color: white;
+  animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
 }
 
+@keyframes headshake {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
 h1 {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -10408,6 +10414,53 @@ h2, h3 {
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 
+.container5 .btnCustomDarken {
+  background-color: orange;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.container5 .btnCustomDarken:hover {
+  color: white;
+}
+.container5 .btnCustomDarken:hover::after {
+  opacity: 1;
+}
+.container5 .btnCustomDarken:hover + img::before {
+  opacity: 0;
+}
+.container5 .btnCustomDarken::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(circle, #ffae1a 0%, #cc8400 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+.container5 .container5__imgBox {
+  z-index: -1;
+}
+.container5 .container5__imgBox img {
+  width: 300px;
+  height: auto;
+  transition: opacity 1s;
+}
+.container5 .container5__imgBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 1rem;
+  background: orange;
+  z-index: 1;
+}
+
 .containerTest .test {
   position: relative;
   z-index: -1;
@@ -10483,57 +10536,99 @@ h2, h3 {
     transform: scaleX(1);
   }
 }
-@keyframes catAnimation {
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards infinite alternate ease-in-out;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 1580ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 1330ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 1500ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 2720ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 3970ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bars {
   0% {
-    transform: translateX(-9999px);
+    transform: scaleY(0.5);
   }
   100% {
-    transform: translateX(0);
+    transform: scaleY(1);
   }
 }
-.container {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  padding: 50px 0;
+.spin {
+  background-color: #15DEA5;
+  width: 30vh;
+  height: 30vh;
+  animation: spin 3s linear infinite paused;
 }
-.container__btn {
-  margin-top: 30px;
+.spin:hover {
+  animation-play-state: running;
 }
-.container__progress {
-  width: 400px;
-  border: 1px solid black;
-  height: 50px;
-  display: flex;
-}
-.container__progressBar {
-  opacity: 1;
-  background-color: #007bff;
-  width: 97%;
-  height: 85%;
-  margin: auto;
-  transform-origin: left;
-  transform: scaleX(0.5);
-  animation: progress-bar 1000ms 150ms both;
-}
-.container .cat {
-  width: 50vw;
-  height: 30vw;
-  position: absolute;
-  overflow: hidden;
-  background-image: url("https://images.pexels.com/photos/6328142/pexels-photo-6328142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-  background-size: cover;
-  background-position: -20%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.1rem;
-  font-size: 3vw;
-  font-weight: 900;
-  color: white;
-  animation: catAnimation 0s 1300ms both;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
