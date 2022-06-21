@@ -10,7 +10,7 @@ Vous devrez ensuite réaliser une première maquette de ce site correspondant à
 
 ## Livrables
 
-[Le cahier des charges](../../PFILM_dauvier_charles-boris/PFILM_01_cahierdescharges/PFILM_01_cahierdescharges.pdf)
+[Le cahier des charges](PFILM_01_cahierdescharges.pdf)
 
 Le code source de la maquette uniquement en HTML et CSS
 <br>Le résultat est visible [ici]()
