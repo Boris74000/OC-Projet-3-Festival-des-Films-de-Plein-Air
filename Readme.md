@@ -13,7 +13,7 @@ Vous devrez ensuite réaliser une première maquette de ce site correspondant à
 [Le cahier des charges](PFILM_01_cahierdescharges.pdf)
 
 Le code source de la maquette uniquement en HTML et CSS
-<br>Le résultat est visible [ici]()
+<br>Le résultat est visible [ici](https://boris74000.github.io/OC-Projet-3-Festival-des-Films-de-Plein-Air/#carouselExampleIndicators)
 
 ## Pour lancer la compilation du css
 
